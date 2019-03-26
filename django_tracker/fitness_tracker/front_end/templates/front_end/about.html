@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+</head>
+
+<body >
+    <nav class="orange darken-2">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">PFA Workout Tracker</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="active"><a href="index.html">Add Workout</a></li>
+                <li><a href="about.html">Find Workouts</a></li>
+                <li><a href="collapsible.html">Graph</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <div class="row">
+
+        <form action="{% url 'home' %}" method="post" class="col s12">
+            {% csrf_token %}
+            <div class="row">
+                <div class="input-field col s12">
+                    <input placeholder="55" name='pushups' id="pushups_id" type="text" class="validate">
+                    <label for="pushups_id">Pushups</label>
+                </div>
+                <div class="input-field col s12">
+                    <input placeholder="23" name='situps' id="situps_id" type="text" class="validate">
+                    <label for="situps_id">Situps</label>
+                </div>
+                <div class="input-field col s12">
+                    <input placeholder="David Allen" name='name' id="name_id" type="text" class="validate">
+                    <label for="name_id">name</label>
+                </div>
+                <button type="submit" value="go" class="btn waves-effect waves-light  teal lighten-2">Submit</button>
+            </div>
+        </form>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
